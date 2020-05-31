@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/include"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        layout="@layout/activity_maps"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:background="#8BC34A"
+        tools:context=".MapsActivity" />
+
+
+    <Button
+        android:id="@+id/buttonIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonOUT"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="17dp"
+        android:text="Powiększ" />
+
+
+    <Button
+        android:id="@+id/buttonOUT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="50dp"
+        android:text="Oddal" />
+
+    <Button
+        android:id="@+id/clear_button"
+        android:layout_width="94dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="41dp"
+        android:background="#8BC34A"
+        android:onClick="clearButtonClick"
+        android:text="Wyczyść"
+        android:textColor="#FFFFFF" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="35dp"
+        android:backgroundTint="#E3E2E2"
+        android:clickable="true"
+        android:onClick="fabXClick"
+
+        app:backgroundTint="#FFFFFF"
+
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <LinearLayout
+
+        android:id="@+id/accelerationLabel"
+        android:layout_width="296dp"
+        android:layout_height="41dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:background="#E91E63"
+        android:orientation="vertical"
+        android:weightSum="2"
+
+        >
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#F2F4EF"
+            android:gravity="center"
+            android:text="Akcelerometr:"
+
+            android:textColor="#E91E63" />
+
+        <TextView
+            android:id="@+id/accelerationParms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#8BC34A"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#FFFFFF" />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="36dp"
+        android:layout_toStartOf="@+id/fab_x"
+        android:clickable="true"
+        app:backgroundTint="#FFFFFF"
+        app:srcCompat="@android:drawable/radiobutton_on_background" />
+
+
+</RelativeLayout>
